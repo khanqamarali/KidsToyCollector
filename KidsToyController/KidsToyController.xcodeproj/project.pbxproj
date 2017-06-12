@@ -13,6 +13,8 @@
 		B3D9461E1EEEE8A700EE1490 /* KidsToyController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3D9461C1EEEE8A700EE1490 /* KidsToyController.xcdatamodeld */; };
 		B3D946201EEEE8A700EE1490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D9461F1EEEE8A700EE1490 /* Assets.xcassets */; };
 		B3D946231EEEE8A700EE1490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D946211EEEE8A700EE1490 /* LaunchScreen.storyboard */; };
+		B3D9462B1EEEF26900EE1490 /* Screen Shot 2017-04-09 at 10.00.13 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = B3D9462A1EEEF26900EE1490 /* Screen Shot 2017-04-09 at 10.00.13 PM.png */; };
+		B3D9462D1EEEF5E600EE1490 /* ToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9462C1EEEF5E600EE1490 /* ToyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B3D9461F1EEEE8A700EE1490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D946221EEEE8A700EE1490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3D946241EEEE8A700EE1490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D9462A1EEEF26900EE1490 /* Screen Shot 2017-04-09 at 10.00.13 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2017-04-09 at 10.00.13 PM.png"; path = "../../../Desktop/Screen Shot 2017-04-09 at 10.00.13 PM.png"; sourceTree = "<group>"; };
+		B3D9462C1EEEF5E600EE1490 /* ToyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		B3D946141EEEE8A700EE1490 /* KidsToyController */ = {
 			isa = PBXGroup;
 			children = (
+				B3D9462A1EEEF26900EE1490 /* Screen Shot 2017-04-09 at 10.00.13 PM.png */,
 				B3D946151EEEE8A700EE1490 /* AppDelegate.swift */,
 				B3D946171EEEE8A700EE1490 /* ViewController.swift */,
 				B3D946191EEEE8A700EE1490 /* Main.storyboard */,
+				B3D9462C1EEEF5E600EE1490 /* ToyViewController.swift */,
 				B3D9461F1EEEE8A700EE1490 /* Assets.xcassets */,
 				B3D946211EEEE8A700EE1490 /* LaunchScreen.storyboard */,
 				B3D946241EEEE8A700EE1490 /* Info.plist */,
@@ -128,6 +134,7 @@
 			files = (
 				B3D946231EEEE8A700EE1490 /* LaunchScreen.storyboard in Resources */,
 				B3D946201EEEE8A700EE1490 /* Assets.xcassets in Resources */,
+				B3D9462B1EEEF26900EE1490 /* Screen Shot 2017-04-09 at 10.00.13 PM.png in Resources */,
 				B3D9461B1EEEE8A700EE1490 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D946181EEEE8A700EE1490 /* ViewController.swift in Sources */,
+				B3D9462D1EEEF5E600EE1490 /* ToyViewController.swift in Sources */,
 				B3D946161EEEE8A700EE1490 /* AppDelegate.swift in Sources */,
 				B3D9461E1EEEE8A700EE1490 /* KidsToyController.xcdatamodeld in Sources */,
 			);
