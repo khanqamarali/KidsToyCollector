@@ -47,5 +47,21 @@ class ToyViewController: UIViewController,UIImagePickerControllerDelegate,UINavi
     }
     
     @IBAction func AddTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        
+        let toyPhoto = ToyPhoto(context: context)
+        
+        toyPhoto.title = TitleTextField.text
+        
+        
+        toyPhoto.image = UIImageJPEGRepresentation(ToyImageView.image!, 0.8) as! NSData
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController?.popViewController(animated: true)
+        
+        
+        
     }
 }

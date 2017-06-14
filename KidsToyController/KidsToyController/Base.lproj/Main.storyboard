@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KidsToyController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="KidsToyController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,7 +22,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9e2-Ex-LO3">
+                                <rect key="frame" x="16" y="64" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XQ0-go-vud">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XQ0-go-vud" secondAttribute="trailing" id="EwP-h8-60G"/>
+                            <constraint firstItem="XQ0-go-vud" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O2a-WN-7pb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XQ0-go-vud" secondAttribute="bottom" id="XNv-CX-Zfd"/>
+                            <constraint firstItem="XQ0-go-vud" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="coY-Ce-Z1m"/>
+                            <constraint firstItem="XQ0-go-vud" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mzZ-vk-4Yh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ktg-YG-PQF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YZZ-u6-e7G">
@@ -31,6 +48,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="XQ0-go-vud" id="QEl-7H-CH6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

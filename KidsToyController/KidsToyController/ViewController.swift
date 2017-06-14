@@ -8,17 +8,46 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var toysDis : [ToyPhoto] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.dataSource = self
+        tableView.dataSource = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do{
+            toysDis = try context.fetch(ToyPhoto.fetchRequest())
+           tableView.reloadData()
+        } catch {
+        }
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return toysDis.count
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    let cell = UITableViewCell()
+    let toy = toysDis[indexPath.row]
+    cell.textLabel?.text = toy.title
+        cell.imageView?.image = UIImage(data: toy.image as! Data)
+    return cell
+    }
+    
 
 
 }
