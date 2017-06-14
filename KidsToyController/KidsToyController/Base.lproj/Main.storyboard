@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.2" y="123.68815592203899"/>
+            <point key="canvasLocation" x="409" y="124"/>
         </scene>
         <!--Toy View Controller-->
         <scene sceneID="nUx-bj-68h">
@@ -48,19 +48,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-04-09 at 10.00.13 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="5ac-zj-3EM">
-                                <rect key="frame" x="20" y="84" width="280" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="FhK-Iv-UnV"/>
-                                    <constraint firstAttribute="height" constant="150" id="heq-fA-FxF"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E47-yb-QUH">
-                                <rect key="frame" x="56" y="277" width="280" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90O-RZ-yTt">
                                 <rect key="frame" x="145" y="358" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
@@ -68,6 +55,19 @@
                                     <action selector="AddTapped:" destination="qFP-ge-Aa7" eventType="touchUpInside" id="8NX-lj-EBi"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Screen Shot 2017-04-09 at 10.00.13 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="5ac-zj-3EM">
+                                <rect key="frame" x="20" y="82" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="FhK-Iv-UnV"/>
+                                    <constraint firstAttribute="height" constant="150" id="heq-fA-FxF"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E47-yb-QUH">
+                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFa-Cv-MXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="124"/>
+            <point key="canvasLocation" x="1181" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mqv-3Q-htg">
