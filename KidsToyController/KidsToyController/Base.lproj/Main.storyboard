@@ -44,7 +44,7 @@
                     <navigationItem key="navigationItem" id="Ktg-YG-PQF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YZZ-u6-e7G">
                             <connections>
-                                <segue destination="qFP-ge-Aa7" kind="show" id="7oM-ip-Ah8"/>
+                                <segue destination="qFP-ge-Aa7" kind="show" identifier="toysegue" id="7oM-ip-Ah8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

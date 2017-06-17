@@ -13,10 +13,23 @@ class ToyViewController: UIViewController,UIImagePickerControllerDelegate,UINavi
     @IBOutlet weak var ToyImageView: UIImageView!
     
     var imagePicker = UIImagePickerController()
+    
+    var selectedToy : ToyPhoto? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+        if(selectedToy != nil)
+        {
+            print("did selected")
+        }
+        else
+        {
+            print("Not selected")
+        }
+        
 
         // Do any additional setup after loading the view.
     }
