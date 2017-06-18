@@ -68,13 +68,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90O-RZ-yTt">
-                                <rect key="frame" x="145" y="358" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="AddTapped:" destination="qFP-ge-Aa7" eventType="touchUpInside" id="8NX-lj-EBi"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Screen Shot 2017-04-09 at 10.00.13 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="5ac-zj-3EM">
                                 <rect key="frame" x="20" y="82" width="280" height="150"/>
                                 <constraints>
@@ -88,6 +81,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zx1-AY-brw">
+                                <rect key="frame" x="137.5" y="406" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="TappDelete:" destination="qFP-ge-Aa7" eventType="touchUpInside" id="ukI-qe-6fm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90O-RZ-yTt">
+                                <rect key="frame" x="145" y="362" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="AddTapped:" destination="qFP-ge-Aa7" eventType="touchUpInside" id="8NX-lj-EBi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,9 +102,11 @@
                             <constraint firstItem="5ac-zj-3EM" firstAttribute="centerX" secondItem="Xbz-ni-bKt" secondAttribute="centerX" id="6vt-Zk-90B"/>
                             <constraint firstItem="E47-yb-QUH" firstAttribute="centerX" secondItem="Xbz-ni-bKt" secondAttribute="centerX" id="J01-qg-aB0"/>
                             <constraint firstItem="5ac-zj-3EM" firstAttribute="top" secondItem="oHT-yM-TxU" secondAttribute="bottom" constant="20" id="Nos-aV-fGs"/>
+                            <constraint firstItem="zx1-AY-brw" firstAttribute="top" secondItem="90O-RZ-yTt" secondAttribute="bottom" constant="18" id="Oip-pS-Yt7"/>
                             <constraint firstItem="90O-RZ-yTt" firstAttribute="top" secondItem="E47-yb-QUH" secondAttribute="bottom" constant="51" id="R6B-Ms-EHV"/>
                             <constraint firstItem="E47-yb-QUH" firstAttribute="width" secondItem="5ac-zj-3EM" secondAttribute="width" id="YAS-yq-ZSa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E47-yb-QUH" secondAttribute="trailing" constant="40" id="aHp-Kq-vRt"/>
+                            <constraint firstItem="zx1-AY-brw" firstAttribute="centerX" secondItem="Xbz-ni-bKt" secondAttribute="centerX" id="lmU-Xr-lXX"/>
                             <constraint firstItem="90O-RZ-yTt" firstAttribute="centerX" secondItem="Xbz-ni-bKt" secondAttribute="centerX" id="skA-fE-5VL"/>
                             <constraint firstItem="E47-yb-QUH" firstAttribute="top" secondItem="5ac-zj-3EM" secondAttribute="bottom" constant="43" id="tbx-kF-VGf"/>
                             <constraint firstItem="E47-yb-QUH" firstAttribute="leading" secondItem="Xbz-ni-bKt" secondAttribute="leadingMargin" constant="40" id="zQ0-z1-uXd"/>
@@ -120,11 +129,13 @@
                     <connections>
                         <outlet property="TitleTextField" destination="E47-yb-QUH" id="5Xe-1R-KDC"/>
                         <outlet property="ToyImageView" destination="5ac-zj-3EM" id="B6A-un-aLJ"/>
+                        <outlet property="addUpdateButton" destination="90O-RZ-yTt" id="ur0-ru-h6j"/>
+                        <outlet property="deleteButton" destination="zx1-AY-brw" id="8cY-gW-aZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFa-Cv-MXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1181" y="124"/>
+            <point key="canvasLocation" x="1179.375" y="123.59154929577466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mqv-3Q-htg">

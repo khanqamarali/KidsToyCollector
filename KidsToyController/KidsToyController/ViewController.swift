@@ -55,7 +55,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       let detailViewControl = segue.destination as! ToyViewController
-        detailViewControl.selectedToy = sender as? ToyPhoto
+        detailViewControl.toyPhoto = sender as? ToyPhoto
         
         
     }

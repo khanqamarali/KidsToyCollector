@@ -14,25 +14,39 @@ class ToyViewController: UIViewController,UIImagePickerControllerDelegate,UINavi
     
     var imagePicker = UIImagePickerController()
     
-    var selectedToy : ToyPhoto? = nil
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    var toyPhoto : ToyPhoto? = nil
+    
+    @IBAction func TappDelete(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(toyPhoto!)
+        navigationController?.popViewController(animated: true)
+        
+    }
+   
+    
+    @IBOutlet weak var addUpdateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
         
-        if(selectedToy != nil)
+        if(toyPhoto != nil)
         {
-            print("did selected")
-        }
-        else
-        {
-            print("Not selected")
+                ToyImageView.image =  UIImage(data: toyPhoto!.image as! Data)
+                TitleTextField.text = toyPhoto!.title
+            addUpdateButton.setTitle("Update", for: .normal)
+             deleteButton.isHidden = false
         }
         
-
-        // Do any additional setup after loading the view.
-    }
+        else
+        {
+        deleteButton.isHidden = true
+        }
+       }
 
     @IBOutlet weak var TitleTextField: UITextField!
     
@@ -60,21 +74,21 @@ class ToyViewController: UIViewController,UIImagePickerControllerDelegate,UINavi
     }
     
     @IBAction func AddTapped(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         
-        let toyPhoto = ToyPhoto(context: context)
-        
+        if(toyPhoto != nil)
+        {
+            toyPhoto!.title = TitleTextField.text
+            toyPhoto!.image = UIImageJPEGRepresentation(ToyImageView.image!, 0.8) as! NSData
+
+        }
+        else{
+             let toyPhoto = ToyPhoto(context: context)
         toyPhoto.title = TitleTextField.text
-        
-        
         toyPhoto.image = UIImageJPEGRepresentation(ToyImageView.image!, 0.8) as! NSData
-        
+        }
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        
-        navigationController?.popViewController(animated: true)
-        
-        
-        
+            navigationController?.popViewController(animated: true)
     }
 }
