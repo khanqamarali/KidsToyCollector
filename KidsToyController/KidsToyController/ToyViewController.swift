@@ -66,6 +66,8 @@ class ToyViewController: UIViewController,UIImagePickerControllerDelegate,UINavi
 
     @IBAction func CameraTapped(_ sender: Any) {
         
+         imagePicker.sourceType = .camera
+         present(imagePicker,animated: true,completion: nil)
     }
 
     @IBAction func PhotoTapped(_ sender: Any) {
